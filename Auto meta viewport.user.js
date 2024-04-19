@@ -3,7 +3,7 @@
 // @namespace      https://github.com/NateScarlet/Scripts/tree/master/user-script
 // @description    Use <meta name="viewport" content="width=device-width, initial-scale=1"> as default.
 // @version        2222.01
-// @run-at         document-end
+// @run-at         document-body
 // @match          old.reddit.com/*
 // ==/UserScript==
 function main() {
