@@ -1,129 +1,361 @@
-[
-  {
-    "settings": {
-      "openEditInWindow": true,
-      "openEditInWindow.popup": false,
-      "windowPosition": {},
-      "show-badge": true,
-      "disableAll": false,
-      "exposeIframes": false,
-      "exposeStyleName": false,
-      "newStyleAsUsercss": true,
-      "styleViaASS": false,
-      "styleViaXhr": false,
-      "patchCsp": false,
-      "urlInstaller": true,
-      "config.autosave": true,
-      "schemeSwitcher.enabled": "system",
-      "schemeSwitcher.nightStart": "18:00",
-      "schemeSwitcher.nightEnd": "06:00",
-      "popup.enabledFirst": true,
-      "popup.stylesFirst": true,
-      "popup.autoResort": false,
-      "popup.borders": false,
-      "popup.findSort": "u",
-      "manage.onlyEnabled": false,
-      "manage.onlyLocal": false,
-      "manage.onlyUsercss": false,
-      "manage.onlyEnabled.invert": false,
-      "manage.onlyLocal.invert": false,
-      "manage.onlyUsercss.invert": false,
-      "manage.actions.expanded": true,
-      "manage.backup.expanded": true,
-      "manage.filters.expanded": true,
-      "manage.minColumnWidth": 750,
-      "manage.newUI": true,
-      "manage.newUI.favicons": false,
-      "manage.newUI.faviconsGray": true,
-      "manage.newUI.targets": 3,
-      "manage.newUI.sort": "title,asc",
-      "manage.searchMode": "meta",
-      "editor.options": {},
-      "editor.toc.expanded": true,
-      "editor.options.expanded": true,
-      "editor.lint.expanded": true,
-      "editor.publish.expanded": true,
-      "editor.lineWrapping": true,
-      "editor.smartIndent": true,
-      "editor.indentWithTabs": false,
-      "editor.tabSize": 4,
-      "editor.keyMap": "sublime",
-      "editor.theme": "default",
-      "editor.beautify": {
-        "end_with_newline": false,
-        "indent_conditional": true,
-        "newline_after_open_brace": true,
-        "newline_before_close_brace": true,
-        "newline_before_open_brace": false,
-        "newline_between_properties": true,
-        "newline_between_rules": false,
-        "preserve_newlines": true,
-        "selector_separator_newline": true
-      },
-      "editor.beautify.hotkey": "",
-      "editor.lintDelay": 300,
-      "editor.linter": "csslint",
-      "editor.lintReportDelay": 500,
-      "editor.matchHighlight": "token",
-      "editor.autoCloseBrackets": true,
-      "editor.autocompleteOnTyping": true,
-      "editor.contextDelete": true,
-      "editor.selectByTokens": true,
-      "editor.arrowKeysTraverse": true,
-      "editor.appliesToLineWidget": true,
-      "editor.autosaveDraft": 10,
-      "editor.livePreview": true,
-      "editor.targetsFirst": true,
-      "editor.colorpicker": true,
-      "editor.colorpicker.hexUppercase": false,
-      "editor.colorpicker.hotkey": "",
-      "editor.colorpicker.color": "#fe6831",
-      "editor.colorpicker.maxHeight": 300,
-      "hotkey._execute_browser_action": "",
-      "hotkey.openManage": "",
-      "hotkey.styleDisableAll": "",
-      "sync.enabled": "none",
-      "iconset": 0,
-      "badgeDisabled": "#8B0000",
-      "badgeNormal": "#006666",
-      "headerWidth.edit": 280,
-      "headerWidth.install": 280,
-      "headerWidth.manage": 280,
-      "popupWidth": 246,
-      "popupWidthMax": 280,
-      "updateInterval": 24,
-      "updateOnlyEnabled": false,
-      "popup.breadcrumbs": null,
-      "popup.breadcrumbs.usePath": null,
-      "popup.findStylesInline": null
-    },
-    "order": {
-      "main": [],
-      "prio": []
+/* ==UserStyle==
+@name           old.reddit.com - апр. 2024 г.
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://old.reddit.com/") {
+    /* Место для CSS кода... */
+    .mobile-web-redirect-bar,
+    .redesign-beta-optin,
+    .footer-parent,
+    .side,
+    .listing-chooser {
+        display: none;
     }
-  },
-  {
-    "enabled": true,
-    "installDate": 1713383207472,
-    "sections": [
-      {
-        "code": ""
-      }
-    ],
-    "sourceCode": "/* ==UserStyle==\n@name           old.reddit.com - апр. 2024 г.\n@namespace      github.com/openstyles/stylus\n@version        1.0.0\n@description    A new userstyle\n@author         Me\n==/UserStyle== */\n@-moz-document url-prefix(\"https://old.reddit.com/\") {\n    /* Место для CSS кода... */\n    .mobile-web-redirect-bar,\n    .redesign-beta-optin,\n    .footer-parent,\n    .side,\n    .listing-chooser {\n        display: none;\n    }\n    .nav-buttons {\n        margin: 0 5px;\n    }\n    .content {\n        margin-left: 0 !important;\n        margin-right: 0 !important;\n    }\n    #header {\n        .default-header {\n            //display:none;\n        }\n        #header-bottom-left {\n            margin-top: 25px;\n        }\n        .tabmenu {\n            display: flex;\n            flex-wrap: wrap;\n            .selected {\n                a {\n                    border: 1px solid #5f99cf;\n                }\n            }\n            li {\n                margin: 5px 4px !important;\n                a {\n                    border-radius: 4px;\n                }\n            }\n        }\n        #header-bottom-right {\n            left: 0;\n        }\n    }\n    .content {\n        .infobar {\n            display: none;\n        }\n        > .sitetable {\n            .thing {\n                display: grid;\n                grid-template-columns: 70px auto 45px;\n                padding-bottom: 10px; //overflow:hidden;\n                .res-selected {\n                    background: none !important;\n                }\n                &.link {\n                    padding: 0 !important;\n                }\n                &:not(&:last-child) {\n                    border-bottom: 1px solid #ccc;\n                } //grid-auto-rows:1fr;\n                .parent {\n                    grid-column-start: 1;\n                    grid-row: 2;\n                }\n                .thumbnail {\n                    grid-column-start: 1;\n                    max-height: 70px;\n                    max-width: 70px;\n                    margin: 0 5px;\n                    display: flex;\n                    align-items: center;\n                    pointer-events: none;\n                    &.self,\n                    &.default,\n                    &.nsfw {\n                        margin: 10px 0;\n                    }\n                }\n                .rank {\n                    grid-column-start: 3;\n                    grid-row: 1;\n                    display: none;\n                }\n                .midcol {\n                    grid-column-start: 3;\n                    grid-row: 1;\n                    overflow: hidden;\n                    margin: 0 !important;\n                    .score {\n                        font-size: 0.7rem;\n                    }\n                }\n                .entry {\n                    //position:absolute;\n                    display: block;\n                    overflow: visible;\n                    margin: 0 !important;\n                    border: none;\n                    .expando {\n                        margin-left: -65px;\n                        margin-right: -45px;\n                        max-width: 100%;\n                        div {\n                            max-width: 100vw !important;\n                            min-width: calc(100vw - 10px) !important;\n                        }\n                    }\n                    .top-matter {\n                        margin-left: -70px;\n                        display: grid;\n                        grid-template-columns: 75px 40px 90px auto;\n                        grid-template-rows: minmax(75px, auto) 0px auto 5px;\n                        row-gap: 5px;\n                        position: relative;\n                        &:before {\n                            height: 0px;\n                            content: \"\";\n                            grid-column: 1/-1;\n                            grid-row: 2;\n                            background: #ccc;\n                            margin-right: -45px;\n                        }\n                        p.title {\n                            padding-left: 10px;\n                            grid-column: 2/-1;\n                            grid-row: 1;\n                            margin: 0 !important;\n                            a.title {\n                                margin: 0 !important;\n                                color: rgb(12, 13, 14);\n                            }\n                            :not(:first-child) {\n                                margin-left: 5px;\n                            }\n                        }\n                        .expando-button {\n                            grid-column-start: 1;\n                            grid-row: 1;\n                            margin: auto 0 0 auto;\n                            z-index: 1;\n                            position: absolute;\n                            padding: 50px 0 0 50px;\n                            background: none;\n                        }\n                        .tagline {\n                            grid-row: 3;\n                            grid-column-start: 3;\n                            grid-column-end: -1;\n                            text-wrap: wrap;\n                            overflow: hidden;\n                            font-size: 0px;\n                            font-weight: bold;\n\n                            > * {\n                                font-size: 12px;\n                                &:nth-child(2) {\n                                    display: none;\n                                }\n                                &:first-child {\n\n                                    &:before {\n                                        display: inline-block;\n                                        content: \"\";\n                                        background: #888;\n                                        height: 5px;\n                                        width: 5px;\n                                        border-radius: 50%;\n                                        margin: 2px 4px;\n                                    }\n                                }\n                                &:not(&:last-child, .userattrs) {\n                                    &:after {\n                                        display: inline-block;\n                                        content: \"\";\n                                        background: #888;\n                                        height: 5px;\n                                        width: 5px;\n                                        border-radius: 50%;\n                                        margin: 2px 4px;\n                                    }\n                                }\n                            }\n                            .RESUserTag {\n                                display: none;\n                            }\n                        }\n                        .flat-list.buttons {\n                            grid-column-start: 1;\n                            grid-column-end: 2;\n                            display: flex;\n                            flex-wrap: nowrap;\n                            margin-left: 5px;\n                            grid-row: 3;\n                            font-size: 12px; //overflow: hidden;\n                            padding: 0;\n                            .first {\n                                line-height: normal;\n                                a {\n                                    display: grid;\n                                    text-decoration: none;\n                                    white-space: normal;\n                                }\n                            }\n                            a {\n                                font-weight: bold;\n                                line-height: normal;\n                            }\n                            > * {\n                                &:not(.first) {\n                                    display: none;\n                                }\n                            }\n                        }\n                        .RESUserTag {\n                            display: none;\n                        }\n                    }\n                }\n            }\n        }\n    }\n    .commentarea {\n        .res-selected {\n            background: none !important;\n            .md-container {\n                background: none !important;\n            }\n        }\n        .panestack-title {\n            display: grid;\n            align-items: center;\n            grid-template-columns: 1fr 0.4fr 1fr 1fr;\n            align-items: start;\n            margin: 10px;\n            .title {\n                margin: 0;\n            }\n            > * {\n                font-size: 12px;\n            }\n            :not(:last-child) {\n                margin-right: 10px;\n            }\n        }\n        .usertext {\n            display: none;\n        }\n        .sitetable {\n            .comment,\n            .comment .comment,\n            .comment .comment .comment,\n            .comment .comment .comment .comment,\n            .comment .comment .comment .comment .comment,\n            .comment .comment .comment .comment .comment .comment,\n            .comment .comment .comment .comment .comment .comment .comment,\n            .comment .comment .comment .comment .comment .comment .comment .comment,\n            .comment .comment .comment .comment .comment .comment .comment .comment .comment,\n            .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {\n                background-color: rgb(255, 255, 255) !important;\n                padding: 0px 0px 0px 8px !important;\n                margin-bottom: 0px !important;\n            }\n\n            .thing {\n                position: relative;\n                &.morechildren {\n                    > .entry {\n                        &:before {\n                            display: none;\n                        }\n                        &:after {\n                            display: none;\n                        }\n                    }\n                }\n                &.comment {\n                    margin-left: 0px !important;\n                    border: none !important;\n                }\n                .child {\n                    margin-left: 0px;\n                    margin-top: 0px;\n                    .no---entry {\n                        &:before {\n                            position: absolute;\n                            left: -10px;\n                            height: 5px;\n                            content: \"\";\n                            width: 5px;\n                            top: 50%;\n                            background-color: #bbc9d5;\n                            border-radius: 2px;\n                        }\n                    }\n                }\n                .midcol {\n                    position: absolute;\n                    display: flex;\n                    width: 35px;\n                    padding-top: 8px;\n                    padding-left: 10px;\n                    .arrow {\n                        width: 20px;\n                        &:not(&:last-child) {\n                            margin-right: 5px;\n                        }\n                    }\n                }\n\n                .entry {\n                    //border-bottom: 1px solid #c5c1ad;\n                    //border-left:1px solid #bbc9d5;\n                    padding-bottom: 5px;\n                    padding-left: 8px;\n                    position: relative;\n                    border: 1px solid #bbc9d5;\n                    margin-top: 2px;\n                    border-radius: 4px;\n                    overflow: visible;\n                    &:after {\n                        position: absolute;\n                        left: 10px;\n                        width: 100%; //content: \"\";\n                        height: 1px;\n                        margin-top: 4px;\n                        background-color: #c5c1ad;\n                    }\n                    .flat-list {\n                        border-top: 1px solid #c5c1ad;\n                    }\n                    .tagline {\n                        margin-left: 35px;\n                        margin-top: 5px;\n                        font-size: 12px;\n                        .score-hidden {\n                            display: none;\n                        }\n                        .flair {\n                            max-height: 20px;\n                        }\n                        :first-child {\n                            font-size: 16px;\n                        }\n                        .RESUserTag {\n                            display: none;\n                        }\n                    }\n                }\n            }\n        }\n    }\n    .midcol {\n        //width:3ex !important;\n    }\n}",
-    "usercssData": {
-      "name": "old.reddit.com - апр. 2024 г.",
-      "namespace": "github.com/openstyles/stylus",
-      "version": "1.0.0",
-      "description": "A new userstyle",
-      "author": "Me"
-    },
-    "author": "Me",
-    "description": "A new userstyle",
-    "name": "old.reddit.com - апр. 2024 г.",
-    "updateDate": 1713482363048,
-    "_id": "e730dd9c-b573-43a4-bbdc-61b4c217ef46",
-    "_rev": 1713482363048,
-    "id": 1
-  }
-]
+    .nav-buttons {
+        margin: 0 5px;
+    }
+    .content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    #header {
+        #header-bottom-left {
+            margin-top: 25px;
+        }
+        .tabmenu {
+            display: flex;
+            flex-wrap: wrap;
+            .selected {
+                a {
+                    border: 1px solid #5f99cf;
+                }
+            }
+            li {
+                margin: 5px 4px !important;
+                a {
+                    border-radius: 4px;
+                }
+            }
+        }
+        #header-bottom-right {
+            left: 0;
+        }
+    }
+    .content {
+        .infobar {
+            display: none;
+        }
+        > .sitetable {
+            .thing {
+                display: grid;
+                &:has(.thumbnail) {
+                    grid-template-columns: 70px auto 45px;
+
+                    .top-matter {
+                        margin-left: -70px;
+
+                        p.title {
+                            grid-column: 1/-1;
+                        }
+                    }
+                }
+                &:not(&:has(.thumbnail)) {
+                    grid-template-columns: auto 45px;
+                    .top-matter {
+                        p.title {
+                            grid-column: 1/-1;
+                        }
+                    }
+                }
+                padding-bottom: 10px;
+                .res-selected {
+                    background: none !important;
+                }
+                &.link {
+                    padding: 0 !important;
+                }
+                &:not(&:last-child) {
+                    border-bottom: 1px solid #ccc;
+                }
+                .parent {
+                    grid-column-start: 1;
+                    grid-row: 2;
+                }
+                .thumbnail {
+                    grid-column-start: 1;
+                    max-height: 70px;
+                    max-width: 70px;
+                    margin: 0 5px;
+                    display: flex;
+                    align-items: center;
+                    pointer-events: none;
+                    &.self,
+                    &.default,
+                    &.nsfw {
+                        margin: 10px 0;
+                    }
+                }
+                .rank {
+                    grid-column-start: 3;
+                    grid-row: 1;
+                    display: none;
+                }
+                .midcol {
+                    grid-column-start: 3;
+                    grid-row: 1;
+                    overflow: hidden;
+                    margin: 0 !important;
+                    .score {
+                        font-size: 0.7rem;
+                    }
+                }
+                .entry {
+                    display: block;
+                    overflow: visible;
+                    margin: 0 !important;
+                    border: none;
+                    .expando {
+                        margin-left: -65px;
+                        margin-right: -45px;
+                        max-width: 100%;
+                        div {
+                            max-width: 100vw !important;
+                            min-width: calc(100vw - 10px) !important;
+                        }
+                    }
+                    .top-matter {
+                        display: grid;
+                        grid-template-columns: 75px 40px 90px auto;
+                        grid-template-rows: minmax(75px, auto) 0px auto 5px;
+                        row-gap: 5px;
+                        position: relative;
+                        &:before {
+                            height: 0px;
+                            content: "";
+                            grid-column: 1/-1;
+                            grid-row: 2;
+                            background: #ccc;
+                            margin-right: -45px;
+                        }
+                        p.title {
+                            padding-left: 10px;
+                            grid-column: 2/-1;
+                            grid-row: 1;
+                            margin: 0 !important;
+                            a.title {
+                                margin: 0 !important;
+                                color: rgb(12, 13, 14);
+                            }
+                            :not(:first-child) {
+                                margin-left: 5px;
+                            }
+                        }
+                        .expando-button {
+                            grid-column-start: 1;
+                            grid-row: 1;
+                            margin: auto 0 0 auto;
+                            z-index: 1;
+                            position: absolute;
+                            padding: 50px 0 0 50px;
+                            background: none;
+                        }
+                        .tagline {
+                            grid-row: 3;
+                            grid-column-start: 3;
+                            grid-column-end: -1;
+                            text-wrap: wrap;
+                            overflow: hidden;
+                            font-size: 0px;
+                            font-weight: bold;
+
+                            > * {
+                                font-size: 12px;
+                                &:nth-child(2) {
+                                    display: none;
+                                }
+                                &:first-child {
+
+                                    &:before {
+                                        display: inline-block;
+                                        content: "";
+                                        background: #888;
+                                        height: 5px;
+                                        width: 5px;
+                                        border-radius: 50%;
+                                        margin: 2px 4px;
+                                    }
+                                }
+                                &:not(&:last-child, .userattrs) {
+                                    &:after {
+                                        display: inline-block;
+                                        content: "";
+                                        background: #888;
+                                        height: 5px;
+                                        width: 5px;
+                                        border-radius: 50%;
+                                        margin: 2px 4px;
+                                    }
+                                }
+                            }
+                            .RESUserTag {
+                                display: none;
+                            }
+                        }
+                        .flat-list.buttons {
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                            display: flex;
+                            flex-wrap: nowrap;
+                            margin-left: 5px;
+                            grid-row: 3;
+                            font-size: 12px;
+                            padding: 0;
+                            .first {
+                                line-height: normal;
+                                a {
+                                    display: grid;
+                                    text-decoration: none;
+                                    white-space: normal;
+                                }
+                            }
+                            a {
+                                font-weight: bold;
+                                line-height: normal;
+                            }
+                            > * {
+                                &:not(.first) {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .RESUserTag {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .commentarea {
+        .res-selected {
+            background: none !important;
+            .md-container {
+                background: none !important;
+            }
+        }
+        .panestack-title {
+            display: grid;
+            grid-template-columns: 1fr 0.4fr 1fr 1fr;
+            align-items: start;
+            margin: 10px;
+            .title {
+                margin: 0;
+            }
+            > * {
+                font-size: 12px;
+            }
+            :not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+        .usertext {
+            display: none;
+        }
+        .sitetable {
+            .comment,
+            .comment .comment,
+            .comment .comment .comment,
+            .comment .comment .comment .comment,
+            .comment .comment .comment .comment .comment,
+            .comment .comment .comment .comment .comment .comment,
+            .comment .comment .comment .comment .comment .comment .comment,
+            .comment .comment .comment .comment .comment .comment .comment .comment,
+            .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+            .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+                background-color: rgb(255, 255, 255) !important;
+                padding: 0px 0px 0px 8px !important;
+                margin-bottom: 0px !important;
+            }
+
+            .thing {
+                position: relative;
+                &.morechildren {
+                    > .entry {
+                        &:before {
+                            display: none;
+                        }
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+                &.comment {
+                    margin-left: 0px !important;
+                    border: none !important;
+                }
+                .child {
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    .no---entry {
+                        &:before {
+                            position: absolute;
+                            left: -10px;
+                            height: 5px;
+                            content: "";
+                            width: 5px;
+                            top: 50%;
+                            background-color: #bbc9d5;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+                .midcol {
+                    position: absolute;
+                    display: flex;
+                    width: 35px;
+                    padding-top: 8px;
+                    padding-left: 10px;
+                    .arrow {
+                        width: 20px;
+                        &:not(&:last-child) {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .entry {
+                    padding-bottom: 5px;
+                    padding-left: 8px;
+                    position: relative;
+                    border: 1px solid #bbc9d5;
+                    margin-top: 2px;
+                    border-radius: 4px;
+                    overflow: visible;
+                    .flat-list {
+                        border-top: 1px solid #c5c1ad;
+                    }
+                    .tagline {
+                        margin-left: 35px;
+                        margin-top: 5px;
+                        font-size: 12px;
+                        .score-hidden {
+                            display: none;
+                        }
+                        .flair {
+                            max-height: 20px;
+                        }
+                        :first-child {
+                            font-size: 16px;
+                        }
+                        .RESUserTag {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
